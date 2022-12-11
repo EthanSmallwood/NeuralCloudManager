@@ -1,0 +1,42 @@
+Character,Offense Mainstat,Offense Substat,Offense Set Name 1,Offense Set Name 2,Stability Mainstat,Stability Substat,Stability Set Name 1,Stability Set Name 2,Special Mainstat,Special Substat,Special Set Name 1,Special Set Name 2
+Abagail,Hashrate %,Hashrate %,Deduction,Progression,Health %,HR>DR,Encapsulate,Perception,Skill Haste,SH>HR,Delta.V,N/A
+Aki,Attack %,ATK>ATK%>CR,MLR Matrix,N/A,Health %,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Convolution,N/A
+Angela,Hashrate %,HP,Deduction,N/A,Health %,HP>DR,Encapsulate,Perception,Skill Haste,SH>Dodge,Delta.V,N/A
+Antonina,Hashrate %,ATK>HR%,Progression,MLR Matrix,Health %,HR>HP,Encapsulate,Perception,Skill Haste,HR>SH,Paradigm,N/A
+Banxsy,Attack %,ATK>CD>ATK%>CR,MLR Matrix,N/A,Health %,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Betty,Attack %,ATK>CD>ATK%>CR,Lower Limit,MLR Matrix,Health %,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Bonee,Hashrate %,HR%,Progression,N/A,Health %,HP%>DR,Encapsulate,N/A,Skill Haste,SH=Dodge,Stratagem,N/A
+Cenaureissi,Attack %,ATK%,Data Repair,N/A,Health %,HP%>DR,Encapsulate,Perception,Skill Haste,SH=Dodge>ATK,Stratagem,N/A
+Chanzi,Attack %,ATK>CD>CR>ATK%,MLR Matrix,N/A,Health,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Chelsea,Attack %,ATK>ATK%,Data Repair,MLR Matrix,Health %,ATK,Encapsulate,Perception,Skill Haste,SH>ATK,Delta.V,N/A
+Choco,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Heal Up=Skill Haste,SH=HR,S.V.M,N/A
+Croque,Hashrate %,HR%,Progression,N/A,Health %,HP%>DR,Overflow,Encapsulate,Skill Haste,SH=Dodge,Stratagem,N/A
+Dushevnaya,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health %,HR>DR,Encapsulate,Perception,Skill Haste,HR>SH,Paradigm,N/A
+Earhart,Hashrate %,ATK>CD>CR>HR%,MLR Matrix,N/A,Health,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Evelyn,Hashrate %,HR%,Progression,N/A,Health %,HP%>DR,Overflow,Encapsulate,Defense,DEF=Dodge,Stratagem,N/A
+Fern,Hashrate %,HR %,MLR Matrix,N/A,Health %,HR,Encapsulate,Perception,Skill Haste,SH>HR,Delta.V,N/A
+Florence,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Skill Haste,SH=HR,Delta.V,N/A
+Fresnel,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health,HR,Encapsulate,Perception,Skill Haste,SH>HR,Paradigm,N/A
+Gin,Hashrate %,HR%>CR,Progression,N/A,Health,HR>CR,Encapsulate,Perception,Crit Rate,CR=HR,Loop Gain,N/A
+Groove,Hashrate %,HR%,Progression,N/A,Health%,HP>DR,Encapsulate,Perception,Skill Haste,SH>Dodge,Delta.V,N/A
+Hubble,Hashrate %,ATK>HR%>CR,MLR Matrix,N/A,Health,HR>CR,Encapsulate,Perception,Skill Haste,HR>SH=CR,Paradigm,N/A
+Imhotep,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Heal Up,SH=HR,S.V.M,N/A
+Jessie,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Skill Haste,SH=HR,Delta.V,N/A
+Ksenia,Hashrate %,HR%,Progression,N/A,Health %,HP>DR,Encapsulate,Perception,Skill Haste,SH>HR,Delta.V,N/A
+Kuro,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health,HR,Encapsulate,Perception,Skill Haste,HR>SH,Paradigm,N/A
+Lam,Attack %,ATK>ATK%,MLR Matrix,N/A,Health,CD>ATK,Encapsulate,Perception,Crit Damage,CD>ATK,Paradigm,N/A
+Mai,Hashrate %,ATK>HR%,Progression,MLR Matrix,Health %,HR>HP,Encapsulate,Perception,Skill Haste,HR>SH,Delta.V,N/A
+Max,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health,HR>CR,Encapsulate,Perception,Skill Haste,SH>HR,Paradigm,N/A
+Nanaka,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Heal Up=Skill Haste,SH=HR,Loop Gain,N/A
+Octogen,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health,HR,Encapsulate,Perception,Skill Haste,HR>SH,Paradigm,N/A
+Panakea,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Heal Up=Skill Haste,SH=HR,S.V.M,N/A
+Persicaria,Hashrate %,HR%,Progression,N/A,Health,HR>DR,Encapsulate,Perception,Heal Up=Skill Haste,SH=HR,S.V.M,N/A
+Rise,Hashrate %,HP,Deduction,N/A,Health %,HP>DR,Encapsulate,Perception,Skill Haste,SH>Dodge,Delta.V,N/A
+Sakuya,Attack %,ATK>ATK%,Feed Forward,MLR Matrix,Health %,ATK>HP,Encapsulate,Perception,Skill Haste,ATK>SH,Paradigm,N/A
+Simo,Attack %,ATK>CD>CR>ATK%,MLR Matrix,N/A,Health,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Sol,Hashrate %,ATK>HR%,MLR Matrix,N/A,Health %,HR,Encapsulate,Perception,Skill Haste,SH>HR,Delta.V,N/A
+Souchun,Hashrate %,HR%,Progression,N/A,Health %,HP%>DR,Overflow,Encapsulate,Skill Haste,SH=Dodge,Stratagem,N/A
+Vee,Attack %,ATK>ATK%>CD,MLR Matrix,N/A,Health %,ATK>CD,Encapsulate,Perception,Crit Damage,ATK>CD,Paradigm,N/A
+Willow,Hashrate %,ATK>CD>CR>HR%,MLR Matrix,N/A,Health,CD>CR,Encapsulate,Perception,CD>CR,CD>CR,Paradigm,N/A
+Yanny,Hashrate %,HR%,Progression,N/A,Health%=Defense%,HP%>DR,Overflow,Encapsulate,Defense %,SH=Dodge,Stratagem,N/A
+Zion,Hashrate %,HR%,Progression,N/A,Health %,HP%>DR,Overflow,Encapsulate,Skill Haste,SH=Dodge,Stratagem,N/A

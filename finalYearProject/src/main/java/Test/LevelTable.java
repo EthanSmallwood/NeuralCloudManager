@@ -12,8 +12,6 @@ public class LevelTable {
         this.totalExp = totalExp;
     }
 
-    // getters for level, exp, and totalExp
-    // (not shown)
 
     @Override
     public String toString() {

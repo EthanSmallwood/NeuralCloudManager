@@ -69,9 +69,12 @@ static {
         //}
 
         // print out all levels
-        for (LevelTable level : levels) {
-            System.out.println(level);
-        }
+//        for (LevelTable level : levels) {
+//            System.out.println(level);
+//        }
+
+
+
     }
 
 
