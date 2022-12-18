@@ -19,6 +19,61 @@ public class Skill {
         this.skillPivotTotal = skillPivotTotal;
     }
 
+    public int getSkillLevel() {
+        return skillLevel;
+    }
+
+    public void setSkillLevel(int skillLevel) {
+        this.skillLevel = skillLevel;
+    }
+
+    public int getSkillSample() {
+        return skillSample;
+    }
+
+    public void setSkillSample(int skillSample) {
+        this.skillSample = skillSample;
+    }
+
+    public int getSkillSampleTotal() {
+        return skillSampleTotal;
+    }
+
+    public void setSkillSampleTotal(int skillSampleTotal) {
+        this.skillSampleTotal = skillSampleTotal;
+    }
+
+    public int getDiggCoins() {
+        return diggCoins;
+    }
+
+    public void setDiggCoins(int diggCoins) {
+        this.diggCoins = diggCoins;
+    }
+
+    public int getDiggCoinsTotal() {
+        return diggCoinsTotal;
+    }
+
+    public void setDiggCoinsTotal(int diggCoinsTotal) {
+        this.diggCoinsTotal = diggCoinsTotal;
+    }
+
+    public int getSkillPivot() {
+        return skillPivot;
+    }
+
+    public void setSkillPivot(int skillPivot) {
+        this.skillPivot = skillPivot;
+    }
+
+    public int getSkillPivotTotal() {
+        return skillPivotTotal;
+    }
+
+    public void setSkillPivotTotal(int skillPivotTotal) {
+        this.skillPivotTotal = skillPivotTotal;
+    }
 
     @Override
     public String toString() {

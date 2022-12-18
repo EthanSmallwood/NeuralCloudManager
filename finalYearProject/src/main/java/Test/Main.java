@@ -1,7 +1,10 @@
 package Test;
+import javafx.scene.image.Image;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.*;
 
 public class Main {
@@ -12,6 +15,7 @@ private static List<Images> roleImage = new ArrayList<>();
 private static List<DollAlgorithmTable> dollAlgorithmTable = new ArrayList<>();
 private static List<Images> algorithmImages = new ArrayList<>();
 private static List<Stars> starTable = new ArrayList<>();
+private static List<Breakthrough> breakthroughTable = new ArrayList<>();
 //turns Algorithm into arrayList
 static {
     String csvFile = "src/main/resources/CSVFiles/Algorithms.csv";
@@ -194,7 +198,7 @@ static {
             // use comma as separator
             String[] values = line.split(csvSplitBy);
 
-            String star = values[0];
+            double star = Double.parseDouble(values[0]);
             int fragment = Integer.parseInt(values[1]);
             int fragmentTotal = Integer.parseInt(values[2]);
             int diggcoin = Integer.parseInt(values[3]);
@@ -209,7 +213,16 @@ static {
         e.printStackTrace();
     }
 }
-
+//creates breakthrough arrayList
+static {
+    breakthroughTable.add(new Breakthrough(0,0,0,0,0,0,0,0));
+    breakthroughTable.add(new Breakthrough(1,10,0,0,0,0,0,500));
+    breakthroughTable.add(new Breakthrough(2,10,15,0,0,0,0,2000));
+    breakthroughTable.add(new Breakthrough(3,0,15,20,0,0,0,5000));
+    breakthroughTable.add(new Breakthrough(4,0,0,15,25,0,0,10000));
+    breakthroughTable.add(new Breakthrough(5,0,0,0,20,30,0,20000));
+    breakthroughTable.add(new Breakthrough(6,0,0,0,0,25,35,12000));
+}
     public static void main(String[] args) throws IOException {
 
         //print arrayLists
@@ -243,14 +256,100 @@ static {
 //        for(Stars stars : starTable){
 //            System.out.println(stars);
 //        }
+            //print out all breakthrough
+//            for(Breakthrough breakthrough : breakthroughTable){
+//                System.out.println(breakthrough);
+//            }
         }
 
-
-
-
-
+        //System.out.println(breakthroughToNext(2,4));
+        //System.out.println(skillToNext(2,10));
+        //System.out.println(starToNext(1.5,4.5));
+        //System.out.println(levelToNext(10,60));
+        mainFunction("Kuro",10,60,3,7,3,7,1,5,3,5);
     }
 
+    public static Breakthrough breakthroughToNext(int currentLevel,int goalLevel) {
+        Breakthrough breakthrough = new Breakthrough(0,0,0,0,0,0,0,0);
+        for(int i = currentLevel + 1 ; i <= goalLevel; i++) {
+            breakthrough.setSimplified(breakthrough.getSimplified()+breakthroughTable.get(i).getSimplified());
+            breakthrough.setStandard(breakthrough.getStandard()+breakthroughTable.get(i).getStandard());
+            breakthrough.setAdvanced(breakthrough.getAdvanced()+breakthroughTable.get(i).getAdvanced());
+            breakthrough.setPremium(breakthrough.getPremium()+breakthroughTable.get(i).getPremium());
+            breakthrough.setPioneering(breakthrough.getPioneering()+breakthroughTable.get(i).getPioneering());
+            breakthrough.setRainbow(breakthrough.getRainbow()+breakthroughTable.get(i).getRainbow());
+            breakthrough.setDiggcoins(breakthrough.getDiggcoins()+breakthroughTable.get(i).getDiggcoins());
+        }
+        return breakthrough;
+    }
+    public static Skill skillToNext(int currentLevel,int goalLevel) {
+        Skill skill = new Skill(0,0,0,0,0,0,0);
+        Skill currentSkill = skillTable.get(currentLevel-1);
+        Skill goalSkill = skillTable.get(goalLevel-1);
+        skill.setSkillSampleTotal(goalSkill.getSkillSampleTotal()-currentSkill.getSkillSampleTotal());
+        skill.setDiggCoinsTotal(goalSkill.getDiggCoinsTotal()-currentSkill.getDiggCoinsTotal());
+        skill.setSkillPivotTotal(goalSkill.getSkillPivotTotal()-currentSkill.getSkillPivotTotal());
+        return skill;
+    }
+    public static Stars starToNext(double currentStar,double goalStar) {
+        int currentIndex = 0;
+        int goalIndex = 0;
+        Stars temp = new Stars(0,0,0,0,0);
+        for(int i = 0; i < starTable.size(); i++) {
+            if(starTable.get(i).getStar() == currentStar) {
+                currentIndex = i;
+            }
+            if(starTable.get(i).getStar() == goalStar) {
+                goalIndex = i;
+            }
+        }
+        temp.setFragmentTotal(starTable.get(goalIndex).getFragmentTotal()-starTable.get(currentIndex).getFragmentTotal());
+        temp.setDiggcoinsTotal(starTable.get(goalIndex).getDiggcoinsTotal()-starTable.get(currentIndex).getDiggcoinsTotal());
+        return temp;
+    }
+    public static int levelToNext(int currentLevel, int goalLevel) {
+        return (levels.get(goalLevel-1).getTotalExp()-levels.get(currentLevel-1).getTotalExp());
+    }
+    public static Images getcharacterImage(String doll){
+        for(int i = 0; i < dolls.size();i++){
+            if(dolls.get(i).getName().equals(doll)){
+                String role = dolls.get(i).getRole();
+                String img = dolls.get(i).getImage();
+                return new Images(role,img);
+            }
+        }
+        return null;
+    }
+    public static String getRoleImage(String role){
+        for(int i = 0; i < roleImage.size();i++){
+            if(roleImage.get(i).getRole().equals(role)){
+                return roleImage.get(i).getImage();
+            }
+        }
+        return null;
+    }
+
+    public static void mainFunction(String dollName,int currentLevel,int goalLevel,int passiveSkillCurrent, int passiveSkillGoal,int autoSkillCurrent,int autoSkillGoal,int breakthroughCurrent,int breakthroughGoal,int starCurrent, int starGoal){
+        Breakthrough tempBreakthrough = breakthroughToNext(breakthroughCurrent,breakthroughGoal);
+        Skill autoSkillTemp = skillToNext(autoSkillCurrent,autoSkillGoal);
+        Skill passiveSkillTemp = skillToNext(passiveSkillCurrent,passiveSkillGoal);
+        Stars starsTemp = starToNext(starCurrent,starGoal);
+        Images characterImage = getcharacterImage(dollName);
+        System.out.println(dollName +" "+ characterImage.getImage() +" "+  characterImage.getRole() +" "+  getRoleImage(characterImage.getRole()) );
+        System.out.println("Resource");
+        System.out.println("Simplified Widget "+ tempBreakthrough.getSimplified());
+        System.out.println("Standard Widget "+ tempBreakthrough.getStandard());
+        System.out.println("Advanced Widget "+ tempBreakthrough.getAdvanced());
+        System.out.println("Premium Widget "+ tempBreakthrough.getPremium());
+        System.out.println("Pioneering Widget "+ tempBreakthrough.getPioneering());
+        System.out.println("Rainbow Widget "+ tempBreakthrough.getRainbow());
+        System.out.println("Skill Sample "+ (autoSkillTemp.getSkillSampleTotal()+passiveSkillTemp.getSkillSampleTotal()));
+        System.out.println("Skill Pivots "+ (autoSkillTemp.getSkillPivotTotal()+passiveSkillTemp.getSkillPivotTotal()));
+        System.out.println("DG Coins "+ ((autoSkillTemp.getDiggCoinsTotal()+passiveSkillTemp.getDiggCoinsTotal())+ (tempBreakthrough.getDiggcoins()) + starsTemp.getDiggcoinsTotal() ));
+        System.out.println("EXP Needed "+ levelToNext(currentLevel,goalLevel) );
+        System.out.println("Fragments "+ starsTemp.getFragmentTotal());
+    }
+    
 
 
 
