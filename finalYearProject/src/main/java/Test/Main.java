@@ -1,10 +1,8 @@
 package Test;
-import javafx.scene.image.Image;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.MessageFormat;
 import java.util.*;
 
 public class Main {
@@ -267,6 +265,7 @@ static {
         //System.out.println(starToNext(1.5,4.5));
         //System.out.println(levelToNext(10,60));
         mainFunction("Kuro",10,60,3,7,3,7,1,5,3,5);
+        //dollAlgorithms("Kuro");
     }
 
     public static Breakthrough breakthroughToNext(int currentLevel,int goalLevel) {
@@ -328,15 +327,51 @@ static {
         }
         return null;
     }
-
+    public static DollAlgorithmTable dollAlgorithms(String doll){
+        for(int i = 0; i < dollAlgorithmTable.size();i++){
+            if(dollAlgorithmTable.get(i).getCharacter().equals(doll)){
+                return dollAlgorithmTable.get(i);
+            }
+        }
+        return null;
+    }
     public static void mainFunction(String dollName,int currentLevel,int goalLevel,int passiveSkillCurrent, int passiveSkillGoal,int autoSkillCurrent,int autoSkillGoal,int breakthroughCurrent,int breakthroughGoal,int starCurrent, int starGoal){
         Breakthrough tempBreakthrough = breakthroughToNext(breakthroughCurrent,breakthroughGoal);
         Skill autoSkillTemp = skillToNext(autoSkillCurrent,autoSkillGoal);
         Skill passiveSkillTemp = skillToNext(passiveSkillCurrent,passiveSkillGoal);
         Stars starsTemp = starToNext(starCurrent,starGoal);
         Images characterImage = getcharacterImage(dollName);
+        DollAlgorithmTable dollAlgorithm = dollAlgorithms(dollName);
+        System.out.println("==========Doll==========");
         System.out.println(dollName +" "+ characterImage.getImage() +" "+  characterImage.getRole() +" "+  getRoleImage(characterImage.getRole()) );
-        System.out.println("Resource");
+        System.out.println("=======Algorithms=======");
+        System.out.println("Offensive");
+        System.out.println("Main Stat: "+ dollAlgorithm.getOffensiveMainstat());
+        System.out.println("Sub Stat: "+ dollAlgorithm.getOffensiveSubstat());
+        System.out.println("Algorithm Set: "+ dollAlgorithm.getOffensiveSetNameOne());
+        if(!dollAlgorithm.getOffensiveSetNameTwo().equalsIgnoreCase("n/a")){
+            System.out.println("OR");
+            System.out.println("Algorithm Set: "+ dollAlgorithm.getOffensiveSetNameTwo());
+        }
+        System.out.println("----------");
+        System.out.println("Stability");
+        System.out.println("Main Stat: "+ dollAlgorithm.getStabilityMainstat());
+        System.out.println("Sub Stat: "+ dollAlgorithm.getStabilitySubstat());
+        System.out.println("Algorithm Set: "+ dollAlgorithm.getStabilitySetNameOne());
+        if(!dollAlgorithm.getStabilitySetNameTwo().equalsIgnoreCase("n/a")){
+            System.out.println("OR");
+            System.out.println("Algorithm Set: "+ dollAlgorithm.getStabilitySetNameTwo());
+        }
+        System.out.println("----------");
+        System.out.println("Special");
+        System.out.println("Main Stat: "+ dollAlgorithm.getSpecialMainstat());
+        System.out.println("Sub Stat: "+ dollAlgorithm.getSpecialSubstat());
+        System.out.println("Algorithm Set: "+ dollAlgorithm.getSpecialSetNameOne());
+        if(!dollAlgorithm.getSpecialSetNameTwo().equalsIgnoreCase("n/a")){
+            System.out.println("OR");
+            System.out.println("Algorithm Set: "+ dollAlgorithm.getSpecialSetNameTwo());
+        }
+        System.out.println("=======Resources========");
         System.out.println("Simplified Widget "+ tempBreakthrough.getSimplified());
         System.out.println("Standard Widget "+ tempBreakthrough.getStandard());
         System.out.println("Advanced Widget "+ tempBreakthrough.getAdvanced());

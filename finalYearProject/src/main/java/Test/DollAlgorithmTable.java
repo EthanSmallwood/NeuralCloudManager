@@ -31,6 +31,110 @@ public class DollAlgorithmTable {
         this.specialSetNameTwo = specialSetNameTwo;
     }
 
+    public String getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(String character) {
+        this.character = character;
+    }
+
+    public String getOffensiveMainstat() {
+        return offensiveMainstat;
+    }
+
+    public void setOffensiveMainstat(String offensiveMainstat) {
+        this.offensiveMainstat = offensiveMainstat;
+    }
+
+    public String getOffensiveSubstat() {
+        return offensiveSubstat;
+    }
+
+    public void setOffensiveSubstat(String offensiveSubstat) {
+        this.offensiveSubstat = offensiveSubstat;
+    }
+
+    public String getOffensiveSetNameOne() {
+        return offensiveSetNameOne;
+    }
+
+    public void setOffensiveSetNameOne(String offensiveSetNameOne) {
+        this.offensiveSetNameOne = offensiveSetNameOne;
+    }
+
+    public String getOffensiveSetNameTwo() {
+        return offensiveSetNameTwo;
+    }
+
+    public void setOffensiveSetNameTwo(String offensiveSetNameTwo) {
+        this.offensiveSetNameTwo = offensiveSetNameTwo;
+    }
+
+    public String getStabilityMainstat() {
+        return stabilityMainstat;
+    }
+
+    public void setStabilityMainstat(String stabilityMainstat) {
+        this.stabilityMainstat = stabilityMainstat;
+    }
+
+    public String getStabilitySubstat() {
+        return stabilitySubstat;
+    }
+
+    public void setStabilitySubstat(String stabilitySubstat) {
+        this.stabilitySubstat = stabilitySubstat;
+    }
+
+    public String getStabilitySetNameOne() {
+        return stabilitySetNameOne;
+    }
+
+    public void setStabilitySetNameOne(String stabilitySetNameOne) {
+        this.stabilitySetNameOne = stabilitySetNameOne;
+    }
+
+    public String getStabilitySetNameTwo() {
+        return stabilitySetNameTwo;
+    }
+
+    public void setStabilitySetNameTwo(String stabilitySetNameTwo) {
+        this.stabilitySetNameTwo = stabilitySetNameTwo;
+    }
+
+    public String getSpecialMainstat() {
+        return specialMainstat;
+    }
+
+    public void setSpecialMainstat(String specialMainstat) {
+        this.specialMainstat = specialMainstat;
+    }
+
+    public String getSpecialSubstat() {
+        return specialSubstat;
+    }
+
+    public void setSpecialSubstat(String specialSubstat) {
+        this.specialSubstat = specialSubstat;
+    }
+
+    public String getSpecialSetNameOne() {
+        return specialSetNameOne;
+    }
+
+    public void setSpecialSetNameOne(String specialSetNameOne) {
+        this.specialSetNameOne = specialSetNameOne;
+    }
+
+    public String getSpecialSetNameTwo() {
+        return specialSetNameTwo;
+    }
+
+    public void setSpecialSetNameTwo(String specialSetNameTwo) {
+        this.specialSetNameTwo = specialSetNameTwo;
+    }
+
     @Override
     public String toString() {
         return "DollAlgorithmTable{" +
